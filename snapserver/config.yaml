@@ -28,6 +28,7 @@ options:
   initial_volume: 100
 schema:
   streams: str
+  streams2: str
   buffer: int
   codec: str
   send_to_muted: str

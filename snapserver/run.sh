@@ -28,6 +28,8 @@ echo "[stream]" > "${config}"
 # Streams
 streams=$(bashio::config 'streams')
 echo "${streams}" >> "${config}"
+streams2=$(bashio::config 'streams2')
+echo "${streams2}" >> "${config}"
 
 # Stream bis and ter
 if bashio::config.has_value 'stream_bis'; then

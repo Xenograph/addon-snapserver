@@ -84,4 +84,5 @@ initial_volume=$(bashio::config 'initial_volume')
 echo "initial_volume = ${initial_volume}" >> "${config}"
 
 bashio::log.info "Starting SnapServer..."
+cat "$config"
 exec snapserver

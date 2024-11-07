@@ -27,7 +27,7 @@ bashio::log.info "Populating snapserver.conf..."
 echo "[stream]" > "${config}"
 # Streams
 streams=$(bashio::config 'streams')
-for stream in ${streams[@]}; do
+for stream in "${streams[@]}"; do
     echo "${stream}" >> "${config}"
 done
 

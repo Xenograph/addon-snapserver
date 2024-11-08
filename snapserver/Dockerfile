@@ -88,6 +88,27 @@ RUN \
     unzip -o snapweb.zip -d /usr/share/snapserver/snapweb/ && \
     rm snapweb.zip
 
+RUN apk -U add \
+    avahi \
+    avahi-tools \
+    dbus \
+    ffmpeg \
+    glib \
+    less \
+    less-doc \
+    libconfig \
+    libgcrypt \
+    libplist \
+    libressl3.6-libcrypto \
+    libsndfile \
+    libsodium \
+    libuuid \
+    man-pages \
+    mandoc \
+    mosquitto \
+    popt \
+    soxr
+
 # Copy data for add-on
 COPY run.sh /
 RUN chmod a+x /run.sh

@@ -1,3 +1,5 @@
+ARG BUILD_FROM
+
 FROM alpine:3.17 AS builder
 
 RUN apk -U add \
@@ -56,8 +58,6 @@ RUN DESTDIR=install make install
 WORKDIR /
 ##### SPS END #####
 
-
-ARG BUILD_FROM
 FROM $BUILD_FROM
 
 # Set shell

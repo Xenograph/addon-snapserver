@@ -99,7 +99,7 @@ RUN apk -U add \
     libconfig \
     libgcrypt \
     libplist \
-    libressl3.6-libcrypto \
+    libressl-dev \
     libsndfile \
     libsodium \
     libuuid \

@@ -109,6 +109,8 @@ RUN apk -U add \
     popt \
     soxr
 
+RUN mkdir /var/run/dbus
+
 # Copy data for add-on
 COPY run.sh /
 RUN chmod a+x /run.sh

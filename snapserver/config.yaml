@@ -11,8 +11,6 @@ arch:
   - armv7
   - i386
 host_network: true
-host_dbus: true
-host_ipc: true
 map: ["share:rw"]
 audio: true
 init: false

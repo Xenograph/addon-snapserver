@@ -1,6 +1,6 @@
 ARG BUILD_FROM
 
-FROM alpine:3.17 AS builder
+FROM BUILD_FROM AS builder
 
 RUN apk -U add \
         alsa-lib-dev \

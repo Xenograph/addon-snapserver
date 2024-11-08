@@ -1,5 +1,10 @@
 #!/usr/bin/env bashio
 
+while [ ! -f /var/run/avahi-daemon/pid ]; do
+  echo "Warning: avahi is not running, sleeping for 1 second before trying to start"
+  sleep 1
+done
+
 mkdir -p /share/snapfifo
 mkdir -p /share/snapcast
 

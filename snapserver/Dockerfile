@@ -73,7 +73,8 @@ COPY --from=builder /shairport-sync/build/install/etc/shairport-sync.conf.sample
 COPY --from=builder /shairport-sync/build/install/etc/dbus-1/system.d/shairport-sync-dbus.conf /etc/dbus-1/system.d/
 COPY --from=builder /shairport-sync/build/install/etc/dbus-1/system.d/shairport-sync-mpris.conf /etc/dbus-1/system.d/
 
-COPY ./etc/s6-overlay/s6-rc.d /etc/s6-overlay/s6-rc.dRUN chmod +x /etc/s6-overlay/s6-rc.d/01-startup/script.sh
+COPY ./etc/s6-overlay/s6-rc.d /etc/s6-overlay/s6-rc.d
+RUN chmod +x /etc/s6-overlay/s6-rc.d/01-startup/script.sh
         
 #Install Librespot
 RUN apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/ librespot=0.6.0-r0
